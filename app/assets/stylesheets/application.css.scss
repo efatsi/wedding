@@ -1,0 +1,59 @@
+/*
+ *= require_tree .
+ *= require_self
+*/
+
+@import "colors";
+
+.content {
+  min-width: 768px;
+}
+
+.img-hero {
+  width: 100%;
+}
+
+.header {
+  padding-top: 20px;
+  text-align: center;
+
+  a {
+    color: black;
+    display: inline;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 0 10px;
+
+    &.current {
+      border-bottom: 5px solid $teal;
+    }
+
+    &:hover {
+      border-bottom: 5px solid $orange;
+    }
+  }
+}
+
+.about-us {
+  padding-top: 30px;
+
+  li {
+    text-align: center;
+    width: 48%;
+
+    img {
+      width: 90%;
+      height: 90%;
+      border: 5px solid $teal;
+    }
+  }
+
+  .about-us--left {
+    float: left;
+  }
+
+  .about-us--right {
+    float: right;
+  }
+}
