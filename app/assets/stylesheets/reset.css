@@ -1,0 +1,62 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+main,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, figure, footer, header,
+hgroup, menu, nav, section, menu,
+time, mark, audio, video {
+  font-weight: normal;
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+article, aside, figure, footer, header,
+hgroup, nav, section { display:block; }
+
+ol, ul { list-style:none; }
+
+blockquote, q { quotes:none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after { content:''; content:none; }
+
+a { margin:0; padding:0; border:0; font-size:100%; vertical-align:baseline; background:transparent; }
+
+table { border-collapse:collapse; border-spacing:0; }
+
+hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
+
+input, select { vertical-align:middle; }
+
+// fonts.css from the YUI Library: http://developer.yahoo.com/yui/
+// refer to http://developer.yahoo.com/yui/fonts/ for font sizing
+table { font-size:inherit; font-size: 100%; }
+
+select, input, textarea { font-size: 99%; }
+
+pre, code { font:115% monospace; *font-size:100%; }
+
+sub { font-size: smaller; vertical-align: sub; }
+
+// make buttons play nice in IE:
+// http://www.viget.com/inspire/styling-the-button-element-in-internet-explorer/
+button {  width: auto; overflow: visible; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+a {
+  text-decoration: none
+}
