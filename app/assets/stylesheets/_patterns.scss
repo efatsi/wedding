@@ -1,5 +1,17 @@
 @import "colors";
 
+.vertical-split {
+  .left {
+    float: left;
+    width: 48%;
+  }
+
+  .right {
+    float: right;
+    width: 48%;
+  }
+}
+
 .teal-h1 {
   color: $teal;
   font-family: 'Neucha', cursive;

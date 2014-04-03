@@ -1,1 +1,47 @@
-details.html.erb
+<div class="location vertical-split">
+  <%= image_tag "http://www.tuckahoeplantation.com/tuckahoe/wp-content/uploads/2013/03/watercolor-map-1024x843.jpg", :class => "left" %>
+  <div class="right">
+    <ul>
+      <li class="detail">Location:
+        <p>
+          <%= link_to "Tuckahoe Plantation", "http://www.tuckahoeplantation.com/" %>
+        </p>
+        <p>12601 River Road</p>
+        <p>Richmond, Virginia 23238</p>
+      </li>
+      <li class="detail">Date:
+        <p>October 4th, 2014</p>
+      </li>
+      <li class="detail">Time:
+        <p>Ceremony begins at 2:00 PM</p>
+        <p>But the party don't start &rsquo;til I walk in.</p>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="clear"></div>
+
+<div class="description wedding-details">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.
+  </p>
+
+  <h1>Map & Lodging</h1>
+
+  <%= image_tag "http://www.tuckahoeplantation.com/tuckahoe/wp-content/uploads/2013/03/watercolor-map-1024x843.jpg", :class => "tuckahoe-map" %>
+
+  <h1>Beverages</h1>
+  <div class="beverages vertical-split">
+    <div class="left">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+      </p>
+    </div>
+    <%= link_to "http://www.brewgentlemen.com/" do %>
+      <%= image_tag "brew_gentlemen_logo.png", :class => "right" %>
+    <% end %>
+  </div>
+</div>
+
+<div class="clear"></div>
