@@ -87,9 +87,8 @@ body {
 .about-us {
   padding-top: 70px;
 
-  li {
+  div {
     text-align: center;
-    width: 48%;
 
     h1 {
       @extend .teal-h1
@@ -104,14 +103,6 @@ body {
     p {
       margin: 15px;
     }
-  }
-
-  .about-us--left {
-    float: left;
-  }
-
-  .about-us--right {
-    float: right;
   }
 }
 
