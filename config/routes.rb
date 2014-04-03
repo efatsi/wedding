@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  root "home#index"
+  root "pages#index"
 
-  get "/parts" => "home#parts"
+  %w(peeps details registry rsvp music).each do |action|
+    get "/#{action}" => "pages##{action}"
+  end
+
+  get "/parts"    => "pages#parts"
 end

@@ -1,0 +1,51 @@
+<%= image_tag "amelia_portrait.jpg", :class => "img-hero" %>
+
+<div class="body">
+  <%= render "shared/header" %>
+
+  <div class="announcement">
+    <p>
+      Hello! Thanks for visiting our site. We&rsquo;re getting married on October 4th, 2014 at The Tuckahoe Plantation. We can&rsquo;t wait to see you there!
+    </p>
+    <div class="countdown">
+      <div class="title">
+        WEDDING COUNTDOWN:
+      </div>
+      <div class="days">
+        <%= (Date.new(2014, 10, 4) - Date.today).to_i %> days!
+      </div>
+    </div>
+  </div>
+
+  <ul class="about-us">
+    <li class="about-us--left">
+      <h1>Her</h1>
+      <img src="<%= image_url('kelsey-facepaint.png') %>" height="550px">
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.
+      </p>
+    </li>
+
+    <li class="about-us--right">
+      <h1>Him</h1>
+      <img src="<%= image_url('elias-facepaint.jpg') %>" height="550px">
+
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor.
+      </p>
+    </li>
+  </ul>
+
+  <div class="clear"></div>
+
+  <div class="our-story">
+    <h1>Our Story</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    <p>
+  </div>
+</div>

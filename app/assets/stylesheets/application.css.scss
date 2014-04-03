@@ -6,8 +6,10 @@
 @import "colors";
 @import "fonts";
 @import "parts";
+@import "patterns";
 
 body {
+  background: $magenta-light;
   font-family: 'Pontano Sans', sans-serif;
 }
 
@@ -34,7 +36,7 @@ body {
   padding-top: 20px;
   text-align: center;
 
-  a {
+  div, a {
     color: black;
     display: inline;
     font-family: 'Neucha', cursive;
@@ -46,10 +48,10 @@ body {
     &.current {
       border-bottom: 5px solid $orange;
     }
+  }
 
-    &:hover {
-      border-bottom: 5px solid $teal;
-    }
+  a:hover {
+    border-bottom: 5px solid $teal;
   }
 }
 
@@ -90,9 +92,7 @@ body {
     width: 48%;
 
     h1 {
-      color: $teal;
-      font-family: 'Neucha', cursive;
-      font-size: 70px;
+      @extend .teal-h1
     }
 
     img {
@@ -112,6 +112,19 @@ body {
 
   .about-us--right {
     float: right;
+  }
+}
+
+.our-story {
+  padding-top: 30px;
+
+  h1 {
+    @extend .teal-h1;
+    text-align: center;
+  }
+
+  p {
+    padding: 5px 60px;
   }
 }
 
