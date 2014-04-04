@@ -15,42 +15,48 @@
 //= require turbolinks
 //= require_tree .
 
-circleUp = function() {
-  var bridesmaids    = $(".bridesmaids").children("li")
-  var step           = (2 * Math.PI)/bridesmaids.length;
-  var angle          = 0;
-  var halfway        = Math.max($(window).width() / 2, 400)
-  var circleCenterX  = halfway - 90;
-  var circleCenterY  = 335;
-  var radius         = 250;
-  for(i = 0; i < bridesmaids.length; i++)
-  {
-    var $element           = $(bridesmaids[i]);
-    var liLeft             = Number(Math.round(circleCenterX + radius * Math.cos(angle)));
-    var liTop              = Number(Math.round(circleCenterY + radius * Math.sin(angle)));
-    $element.css("left", liLeft + "px");
-    $element.css("top", liTop + "px");
-    $element.css("background-image", "url('" + $element.data("image") + "')");
-    angle              += step;
+if ($(".bridesmaids").length) {
+  // if on /peeps page
+
+  circleUp = function() {
+    var bridesmaids    = $(".bridesmaids").children("li")
+    var step           = (2 * Math.PI)/bridesmaids.length;
+    var angle          = 0;
+    var halfway        = Math.max($(window).width() / 2, 400)
+    var circleCenterX  = halfway - 90;
+    var circleCenterY  = 335;
+    var radius         = 250;
+    for(i = 0; i < bridesmaids.length; i++)
+    {
+      var $element           = $(bridesmaids[i]);
+      var $image             = $element.children(".image")
+      var liLeft             = Number(Math.round(circleCenterX + radius * Math.cos(angle)));
+      var liTop              = Number(Math.round(circleCenterY + radius * Math.sin(angle)));
+      $element.css("left", liLeft + "px");
+      $element.css("top", liTop + "px");
+      $image.css("background-image", "url('" + $image.data("image") + "')");
+      angle              += step;
+    }
+
+    var groomsman      = $(".groomsman").children("li")
+    var angle          = 150;
+    var circleCenterY  = 980;
+    for(i = 0; i < groomsman.length; i++)
+    {
+      var $element           = $(groomsman[i]);
+      var $image             = $element.children(".image")
+      var liLeft             = Number(Math.round(circleCenterX + radius * Math.cos(angle)));
+      var liTop              = Number(Math.round(circleCenterY + radius * Math.sin(angle)));
+      $element.css("left", liLeft + "px");
+      $element.css("top", liTop + "px");
+      $image.css("background-image", "url('" + $image.data("image") + "')");
+      angle              += step;
+    }
   }
 
-  var groomsman      = $(".groomsman").children("li")
-  var angle          = 150;
-  var circleCenterY  = 980;
-  for(i = 0; i < groomsman.length; i++)
-  {
-    var $element           = $(groomsman[i]);
-    var liLeft             = Number(Math.round(circleCenterX + radius * Math.cos(angle)));
-    var liTop              = Number(Math.round(circleCenterY + radius * Math.sin(angle)));
-    $element.css("left", liLeft + "px");
-    $element.css("top", liTop + "px");
-    $element.css("background-image", "url('" + $element.data("image") + "')");
-    angle              += step;
-  }
-}
-
-circleUp()
-
-window.onresize = function(event) {
   circleUp()
-};
+
+  window.onresize = function(event) {
+    circleUp()
+  };
+}
