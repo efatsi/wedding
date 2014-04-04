@@ -9,8 +9,20 @@
 @import "patterns";
 
 body {
-  background: $magenta-light;
+  background: $yellow-light;
   font-family: 'Pontano Sans', sans-serif;
+}
+
+a {
+  color: $teal-dark;
+
+  &:hover {
+    color: $teal;
+  }
+}
+
+.opaque-hover:hover {
+  opacity: 0.9;
 }
 
 .content {
@@ -24,8 +36,9 @@ body {
 }
 
 .body {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 30px;
 }
 
 .clear {
@@ -73,9 +86,10 @@ body {
     border-radius: 4px;
 
     .title {
-      font-size: 25px;
-      line-height: 60px;
       border-bottom: 2px solid #fff;
+      font-size: 25px;
+      line-height: 30px;
+      padding: 10px 10px;
     }
 
     .days {
@@ -85,7 +99,7 @@ body {
 }
 
 .about-us {
-  padding-top: 70px;
+  padding-top: 30px;
 
   div {
     text-align: center;
@@ -115,7 +129,7 @@ body {
   }
 
   p {
-    padding: 5px 60px;
+    padding: 5px 30px;
   }
 }
 
@@ -146,6 +160,7 @@ body {
   p {
     font-size: 22px;
     margin-top: 5px;
+    margin-left: 10px;
   }
 
   img.zola-logo {
