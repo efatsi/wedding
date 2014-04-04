@@ -21,10 +21,10 @@ if ($(".bridesmaids").length) {
   circleUp = function() {
     var bridesmaids    = $(".bridesmaids").children("li")
     var step           = (2 * Math.PI)/bridesmaids.length;
-    var angle          = 0;
+    var angle          = 30.2;
     var halfway        = Math.max($(window).width() / 2, 400)
     var circleCenterX  = halfway - 90;
-    var circleCenterY  = 335;
+    var circleCenterY  = 320;
     var radius         = 250;
     for(i = 0; i < bridesmaids.length; i++)
     {
@@ -39,8 +39,8 @@ if ($(".bridesmaids").length) {
     }
 
     var groomsman      = $(".groomsman").children("li")
-    var angle          = 150;
-    var circleCenterY  = 980;
+    var angle          = 98.8;
+    var circleCenterY  = 1060;
     for(i = 0; i < groomsman.length; i++)
     {
       var $element           = $(groomsman[i]);

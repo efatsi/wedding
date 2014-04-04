@@ -10,7 +10,10 @@
 
 body {
   background: $yellow-light;
+  color: #222;
   font-family: 'Pontano Sans', sans-serif;
+  font-size: 20px;
+  min-width: 800px;
 }
 
 a {
@@ -26,9 +29,6 @@ a {
 }
 
 .content {
-  color: #222;
-  font-size: 20px;
-  min-width: 800px;
 }
 
 .img-hero {
@@ -171,8 +171,19 @@ a {
 .peeps {
   text-align: center;
 
+  h1.gals {
+    position: relative;
+    left: -180px;
+  }
+
+  h1.guys {
+    position: relative;
+    bottom: -180px;
+    right: -180px;
+  }
+
   .kelsey, .eli {
-    padding: 140px 0;
+    padding: 60px 0;
 
     li {
       height: 150px;
@@ -201,7 +212,13 @@ a {
         font-family: 'Neucha', cursive;
         font-size: 40px;
         position: relative;
-        top: -95px;
+        top: -105px;
+        width: 80%;
+        margin: 0 auto;
+
+        .subtag {
+          font-size: 16px;
+        }
       }
     }
 
@@ -216,35 +233,33 @@ a {
       }
     }
   }
-}
 
+  .eli {
+    padding: 210px 0 120px;
+  }
 
-.round-pic2 {
-  display: block;
-  width: 130px;
-  height: 130px;
-  margin: 0em auto;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 99em;
-  -webkit-border-radius: 99em;
-  -moz-border-radius: 99em;
-  border: 0px solid gray;
-  box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
-}
-.round-pic2:hover {
-  opacity:0.5;
-}
-
-.round-pic2:hover::before{
-    content: 'text';
+  .midsection {
     position: relative;
-    top: 60px;
-    left: 50px;
-    width: 30px;
-    height: 20px;
-    text-align: center;
-    display: inline-block;
+    bottom: -115px;
+    height: 50px;
+    // background: $purple;
+
+    .dots {
+      position: relative;
+      margin: 0 auto;
+      width: 300px;
+
+      .dot {
+        float: left;
+        margin: 0 30px;
+        // border-radius: 50%;
+        // border: 1px solid $purple;
+        background: $orange;
+        width: 40px;
+        height: 20px;
+      }
+    }
+  }
 }
 
 .footer {

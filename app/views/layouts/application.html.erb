@@ -8,21 +8,17 @@
   <link rel="shortcut icon" href="<%= asset_path 'favicon.ico' %>">
 </head>
 <body>
-
-<div class="content">
   <%= content_for :header_image %>
 
   <div class="body">
     <%= render "shared/header" %>
     <%= yield %>
   </div>
-</div>
 
-<footer class="footer">
-  K & E
-</footer>
+  <footer class="footer">
+    K & E
+  </footer>
 
-<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>
