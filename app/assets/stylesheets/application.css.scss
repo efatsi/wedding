@@ -238,27 +238,14 @@ a {
     padding: 210px 0 120px;
   }
 
-  .midsection {
+  .dashes {
     position: relative;
     bottom: -115px;
     height: 50px;
-    // background: $purple;
-
-    .dots {
-      position: relative;
-      margin: 0 auto;
-      width: 300px;
-
-      .dot {
-        float: left;
-        margin: 0 30px;
-        // border-radius: 50%;
-        // border: 1px solid $purple;
-        background: $orange;
-        width: 40px;
-        height: 20px;
-      }
-    }
+    width: 630px;
+    margin: 0 auto;
+    background-image: url("orange-dash.png");
+    background-repeat:repeat-x;
   }
 }
 
