@@ -1,1 +1,23 @@
-peeps.html.erb
+<div class="peeps">
+  <div class="kelsey">
+    <%= image_tag "bride.png", :width => 180 %>
+    <ul class="bridesmaids">
+      <li data-image="<%= image_path('india.png') %>"></li>
+      <li data-image="<%= image_path('jada.png') %>"></li>
+      <li data-image="<%= image_path('raphi.png') %>"></li>
+      <li data-image="<%= image_path('amelia.png') %>"></li>
+      <li data-image="<%= image_path('beth.png') %>"></li>
+    </ul>
+  </div>
+
+  <div class="eli">
+    <%= image_tag "groom.png", :width => 180 %>
+    <ul class="groomsman">
+      <li data-image="<%= image_path('noah.png') %>"></li>
+      <li data-image="<%= image_path('travis.png') %>"></li>
+      <li data-image="<%= image_path('brett.png') %>"></li>
+      <li data-image="<%= image_path('chatman.png') %>"></li>
+      <li data-image="<%= image_path('kyle2.png') %>"></li>
+    </ul>
+  </div>
+</div>

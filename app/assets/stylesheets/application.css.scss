@@ -168,6 +168,24 @@ a {
   }
 }
 
+.peeps {
+  text-align: center;
+
+  .kelsey, .eli {
+    padding: 140px 0;
+
+    li {
+      background-size: cover;
+      border-radius: 50%;
+      height: 150px;
+      list-style: none;
+      position: absolute;
+      text-align: center;
+      width: 150px;
+    }
+  }
+}
+
 .footer {
   background: $teal;
   font-family: 'Neucha', cursive;
