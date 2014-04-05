@@ -1,0 +1,15 @@
+@import "colors";
+@import "fonts";
+@import "parts";
+
+.registry {
+  p {
+    font-size: 22px;
+    margin-top: 5px;
+    margin-left: 10px;
+  }
+
+  img.zola-logo {
+    width: 40%;
+  }
+}

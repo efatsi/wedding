@@ -1,0 +1,84 @@
+@import "colors";
+@import "fonts";
+@import "parts";
+
+.peeps {
+  text-align: center;
+
+  h1.gals {
+    position: relative;
+    left: -180px;
+  }
+
+  h1.guys {
+    position: relative;
+    bottom: -160px;
+    right: -180px;
+  }
+
+  .kelsey, .eli {
+    padding: 60px 0;
+
+    li {
+      height: 150px;
+      list-style: none;
+      overflow: none;
+      position: absolute;
+      text-align: center;
+      width: 150px;
+
+      .image {
+        background-size: cover;
+        background-position: center center;
+        border-radius: 50%;
+        -webkit-border-radius: 99em;
+        -moz-border-radius: 99em;
+        border: 2px solid gray;
+        box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.3);
+        opacity: 1;
+        transition: opacity 0.15s linear;
+        height: 100%;
+        width: 100%;
+      }
+
+      .name {
+        display: none;
+        font-family: 'Neucha', cursive;
+        font-size: 40px;
+        position: relative;
+        top: -105px;
+        width: 80%;
+        margin: 0 auto;
+
+        .subtag {
+          font-size: 16px;
+        }
+      }
+    }
+
+    li:hover {
+      .image {
+        opacity: 0.3;
+        transition: opacity 0.15s linear;
+      }
+
+      .name {
+        display: block;
+      }
+    }
+  }
+
+  .eli {
+    padding: 210px 0 120px;
+  }
+
+  .dashes {
+    position: relative;
+    bottom: -115px;
+    height: 50px;
+    width: 630px;
+    margin: 0 auto;
+    background-image: url(image_path("orange-dash.png"));
+    background-repeat:repeat-x;
+  }
+}
