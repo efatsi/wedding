@@ -1,0 +1,16 @@
+<div class="music">
+  <p>
+    We&rsquo;ll be getting a DJ for the reception, and we&rsquo;d love to get some song suggestions from you!
+  </p>
+
+  <%= form_for @song_suggestion do |f| %>
+    <%= f.text_field :title, :placeholder => "Song Title", :class => "left" %>
+    <%= f.text_field :artist, :placeholder => "Artist" %>
+    <%= f.text_field :suggester, :placeholder => "Your Name", :class => "right" %>
+    <br>
+    <%= f.text_field :notes, :placeholder => "You should play this song because...", :class => "full-width left" %>
+    <%= f.submit "Submit", :class => "submit" %>
+  <% end %>
+</div>
+
+<div class="clear"></div>
