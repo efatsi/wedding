@@ -1,4 +1,5 @@
 class SongSuggestionsController < ApplicationController
+  before_filter :load_song_suggestions
 
   def new
     @song_suggestion = SongSuggestion.new
@@ -8,9 +9,10 @@ class SongSuggestionsController < ApplicationController
     @song_suggestion = SongSuggestion.new(song_params)
 
     if @song_suggestion.save
-      params[:success] = "Thanks for the suggestion! Feel free to add as many as you like!"
+      flash[:success] = "Thanks for the suggestion! Feel free to add as many as you like!"
       redirect_to "/music"
     else
+      flash[:failure] = "Gotta fill out these things out please :)"
       render "new"
     end
   end
@@ -19,5 +21,9 @@ class SongSuggestionsController < ApplicationController
 
   def song_params
     params[:song_suggestion].permit!
+  end
+
+  def load_song_suggestions
+    @song_suggestions = SongSuggestion.all
   end
 end

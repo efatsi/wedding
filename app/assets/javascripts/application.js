@@ -60,3 +60,8 @@ if ($(".bridesmaids").length) {
     circleUp()
   };
 }
+
+$(".alert-close").click(function(e) {
+  e.preventDefault();
+  $(".alert").slideUp();
+})

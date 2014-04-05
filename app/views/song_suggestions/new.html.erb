@@ -1,3 +1,10 @@
+<% flash.each do |key, value| %>
+  <div class="alert alert-<%= key %>">
+    <%= value %>
+    <a class="alert-close" href="#">X</a>
+  </div>
+<% end %>
+
 <div class="music">
   <p>
     We&rsquo;ll be getting a DJ for the reception, and we&rsquo;d love to get some song suggestions from you!
@@ -11,6 +18,24 @@
     <%= f.text_field :notes, :placeholder => "You should play this song because...", :class => "full-width left" %>
     <%= f.submit "Submit", :class => "submit" %>
   <% end %>
-</div>
 
-<div class="clear"></div>
+  <div class="clear"></div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Song Title</th>
+        <th>Artist</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @song_suggestions.each do |song| %>
+        <tr>
+          <td><%= song.title %></td>
+          <td><%= song.artist %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+</div>

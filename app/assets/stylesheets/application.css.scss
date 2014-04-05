@@ -102,6 +102,32 @@ h1 {
   }
 }
 
+.alert {
+  border-radius: 10px;
+  line-height: 50px;
+  margin: 0 auto;
+  position: relative;
+  top: -15px;
+  text-align: center;
+  width: 620px;
+
+  &.alert-success {
+    background: $light-green;
+  }
+
+  &.alert-failure {
+    background: $light-red;
+  }
+
+  .alert-close {
+    color: black;
+    font-family: 'Neucha', cursive;
+    font-size: 16px;
+    float: right;
+    padding: 3px 20px;
+  }
+}
+
 .footer {
   background: $teal;
   font-family: 'Neucha', cursive;
