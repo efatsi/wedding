@@ -9,9 +9,9 @@
 </head>
 <body>
   <%= content_for :header_image %>
+  <%= render "shared/header" %>
 
   <div class="content">
-    <%= render "shared/header" %>
     <%= yield %>
   </div>
 
