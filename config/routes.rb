@@ -5,8 +5,6 @@ Rails.application.routes.draw do
     get "/#{action}" => "pages##{action}"
   end
 
-  get "/parts"    => "pages#parts"
-
   get "/music" => "song_suggestions#new"
   resources :song_suggestions, :only => [:create]
 end
