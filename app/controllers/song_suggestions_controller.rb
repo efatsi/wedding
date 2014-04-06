@@ -24,6 +24,6 @@ class SongSuggestionsController < ApplicationController
   end
 
   def load_song_suggestions
-    @song_suggestions = SongSuggestion.all
+    @song_suggestions = SongSuggestion.all.reverse
   end
 end

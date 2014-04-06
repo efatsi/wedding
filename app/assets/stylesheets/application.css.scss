@@ -63,10 +63,14 @@ a {
   }
 }
 
-h1 {
+h1, h2 {
   color: $teal;
   font-family: 'Neucha', cursive;
   font-size: 70px;
+}
+
+h2 {
+  font-size: 40px;
 }
 
 .opaque-hover:hover {
