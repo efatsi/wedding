@@ -23,6 +23,7 @@ body {
 
 .img-hero {
   width: 100%;
+  border-bottom: 3px solid $teal;
 }
 
 .header {
@@ -115,7 +116,7 @@ h2 {
   width: 620px;
 
   &.alert-success {
-    background: $light-green;
+    background: $purple-light;
   }
 
   &.alert-failure {
