@@ -1,5 +1,5 @@
 class SongMailer < ActionMailer::Base
-  default from: "new.song@eliasandkelsey.com"
+  default from: "Our Website :) <new.song@eliasandkelsey.com>"
 
   def alert(song_suggestion)
     @title     = song_suggestion.title
