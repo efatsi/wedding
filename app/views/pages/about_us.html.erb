@@ -1,0 +1,66 @@
+<% content_for :header_image do %>
+  <%= image_tag "chataqua_hero.jpg", :class => "img-hero" %>
+<% end %>
+
+<div class="announcement">
+  <p>
+    Hi friends! Thanks for checking out our site. We can&rsquo;t wait to get married on October 4th, 2014 at Tuckahoe Plantation :) We hope to see all of your beautiful faces there to celebrate with us.
+  </p>
+  <div class="countdown">
+    <div class="title">
+      WEDDING COUNTDOWN:
+    </div>
+    <div class="days">
+      <%= (Date.new(2014, 10, 4) - Date.today).to_i %> days!
+    </div>
+  </div>
+</div>
+
+<div class="clear"></div>
+
+<ul class="about-us vertical-split">
+  <div class="left">
+    <h1>Her</h1>
+    <img src="<%= image_url('kelsey-facepaint.png') %>" height="550px">
+
+    <p>
+      I&rsquo;m Kelsey. I like colors (a lot) and any and all kinds of art. Exploring Boulder with my awesome fiancé and sweet sweet pup Bodhi is one of my favorite things to do. Brown sugar, flowers, maté, and candles are pretty awesome things. Right now I&rsquo;m working toward my Masters in Art Therapy, teaching classes part time at <%= link_to "Tinker Art Studio", "http://tinkerartstudio.com/" %>, and loving everything about what I&rsquo;m doing. Life is pretty darn good, especially with mister Elias :)
+    </p>
+  </div>
+
+  <div class="right">
+    <h1>Him</h1>
+    <img src="<%= image_url('elias-facepaint.jpg') %>" height="550px">
+
+    <p>
+      I&rsquo;m Eli. I&rsquo;m a big fan of making, breaking, and fixing things, particularly if they have two wheels and if beer is involved. If I&rsquo;m not making websites (cough cough this one) or other <%= link_to "nerd-related things", "http://f.cl.ly/items/3O1C1C372A1x1z193k2v/whiskeypour.gif" %>, I love to be outside biking, hiking, skiing, or anything under the sun with Kelsey by my side. I&rsquo;m miraculously employed here in Boulder making web things, and excited for pretty much all things in the future!
+    </p>
+  </div>
+</ul>
+
+<div class="clear"></div>
+
+<div class="description story">
+  <h1>Our Story</h1>
+  <p>
+    Hmm..what to say? We met <%= link_to "freshman year of high school", asset_path("yearbook.jpg") %> in Richmond, Virginia. Although we socialized in different circles (read: high school cliques are ridiculous), Kelsey was intrigued by Eli&rsquo;s “disregard for the rules” and Eli always had a fat crush on Kelsey. We went our separate ways in college, one moving south to Miami and the other moving north to Carnegie Mellon.
+  </p>
+
+  <p>
+    After graduating in 2012, both made their way to the most wonderful town - Boulder, CO. Being the first to make the move west, Eli reached out via good ol&rsquo; Facebook to offer up his Boulder knowledge for Kelsey&rsquo;s culture shock. Kelsey, in New Hampshire at the time celebrating graduation with friends, got butterflies of excitement (as her bridesmaid, Raphi, can attest) and spent a good amount of time and energy concocting the FB message response.
+  </p>
+
+  <p>
+    They arranged a meet up over beer due to Eli&rsquo;s confusion over why people like the taste of coffee. That summer, Eli got Kelsey hooked on hiking, camping, bicycle repairs, and drinking good beer; and Kelsey introduced Eli to a suitcase full of art supplies, the coolest dog ever, and regular teeth brushing habits. From there, it&rsquo;s history!
+  </p>
+
+  <h2>The Proposal</h2>
+
+  <p>
+    We went out to SALT, a great restaurant on Pearl just a few blocks from our house for a surprise date night. On the walk home, Eli offered Kelsey some homemade chapstick*. While pulling the chapstick from his pocket, he happened to drop it - a thoroughly practice maneuver. Fearing the chapstick container might have been damaged, he knelt down to make sure everything was okay. When Kelsey, now also concerned, turned around to check on things, Eli happened to be on one knee, and the chapstick container happened to be holding a new ring for Kelsey&rsquo;s left hand. She was ecstatic, burst out a &ldquo;YES&rdquo; and they laughed, cried (tears of joy), and commenced celebrating.
+  </p>
+
+  <p class="cliffnote">
+    * Kelsey made chapstick for Eli as a Christmas present (the flat cylinder kind, not the stick tube kind). Given the dry climate of Colorado, it&rsquo;s always good to have this chapstick on hand.
+  </p>
+</div>

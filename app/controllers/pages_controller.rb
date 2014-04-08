@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  ACTIONS = %w(index peeps details registry rsvp)
+  ACTIONS = %w(about_us peeps details registry rsvp)
 
   ACTIONS.each do |action|
     define_method action do

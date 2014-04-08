@@ -2,13 +2,8 @@ Dev work left:
   /music-special
   email both of us when new music
 
-Eli needs to write:
-  Brew Gentlemen
-  Him
-
 Details:
   Lodging info and map
-
 
 
 PHASE 2

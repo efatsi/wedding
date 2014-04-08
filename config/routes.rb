@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "pages#index"
+  root "pages#about_us"
 
   %w(peeps details registry rsvp).each do |action|
     get "/#{action}" => "pages##{action}"
