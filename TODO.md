@@ -1,6 +1,3 @@
-Dev work left:
-  email both of us when new music
-
 Details:
   Lodging info and map
 
