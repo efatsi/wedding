@@ -9,6 +9,7 @@ class SongSuggestionsController < ApplicationController
     @song_suggestion = SongSuggestion.new(song_params)
 
     if @song_suggestion.save
+      SongMailer.alert(@song_suggestion).deliver
       flash[:success] = "Thanks for the suggestion! Feel free to add as many as you like!"
       redirect_to "/music"
     else
