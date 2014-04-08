@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   end
 
   get "/music" => "song_suggestions#new"
+  get "/all-music" => "song_suggestions#index"
   resources :song_suggestions, :only => [:create]
 end

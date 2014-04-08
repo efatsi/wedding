@@ -1,5 +1,4 @@
 Dev work left:
-  /music-special
   email both of us when new music
 
 Details:

@@ -1,0 +1,24 @@
+<h2>All the Songs</h2>
+
+<div class="music wide">
+  <table>
+    <thead>
+      <tr>
+        <th>Song Title</th>
+        <th>Artist</th>
+        <th>Name</th>
+        <th>Message</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @song_suggestions.each do |song| %>
+        <tr>
+          <td><%= song.title %></td>
+          <td><%= song.artist %></td>
+          <td><%= song.suggester %></td>
+          <td><%= song.notes %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

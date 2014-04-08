@@ -17,6 +17,9 @@ class SongSuggestionsController < ApplicationController
     end
   end
 
+  def index
+  end
+
   private
 
   def song_params
