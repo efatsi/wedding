@@ -69,35 +69,91 @@ $(".alert-close").click(function(e) {
 // apiKey = "AIzaSyBJWhTJnSJUoplLjz_GBsoudyKOCSbcqvk";
 function initialize()
 {
-  var myLatlng = new google.maps.LatLng(37.582544,-77.653414);
+  var centerLatlng  = new google.maps.LatLng(37.6227063,-77.6331096);
+  var weddingLatlng = new google.maps.LatLng(37.582544,-77.653414);
+  var hyattLatlng   = new google.maps.LatLng(37.6563368,-77.6196127);
+  var hiltonLatlng  = new google.maps.LatLng(37.659337,-77.628263);
 
   var mapProp = {
-    center: myLatlng,
-    zoom: 13
-    // mapTypeId: google.maps.MapTypeId.ROADMAP
+    center: centerLatlng,
+    zoom: 12
   };
   var map = new google.maps.Map(document.getElementById("googleMap") ,mapProp);
 
-  var marker = new google.maps.Marker({
-    position: myLatlng,
+  var weddingImage   = "<%= asset_path('wedding-magenta.png') %>";
+  var hotelImage     = "<%= asset_path('hotel-orange.png') %>";
+  var hotelImageTeal = "<%= asset_path('hotel-teal.png') %>";
+
+  var weddingMarker = new google.maps.Marker({
+    position: weddingLatlng,
     animation: google.maps.Animation.DROP,
     map: map,
-    title:"Hello World!"
+    icon: weddingImage
   });
 
-  var contentString = '<div id="markerOverlay">'+
+  var hyattMarker = new google.maps.Marker({
+    position: hyattLatlng,
+    animation: google.maps.Animation.DROP,
+    map: map,
+    icon: hotelImage
+  });
+
+  var hiltonMarker = new google.maps.Marker({
+    position: hiltonLatlng,
+    animation: google.maps.Animation.DROP,
+    map: map,
+    icon: hotelImage
+  });
+
+  var weddingContent = '<div id="markerOverlay">'+
+      '<div class="overlayContent">' +
       '<h3><a href="http://www.tuckahoeplantation.com/" target="_blank">Tuckahoe Plantation</a></h3>'+
       '<p>12601 River Road</p>' +
       '<p>Richmond, Virginia 23238</p>'+
       '<p><a href="https://www.google.com/maps/dir//Tuckahoe+Plantation,+12601+River+Rd,+Richmond,+VA+23238/@37.582544,-77.653414,17z/data=!4m12!1m3!3m2!1s0x0:0x252ce6150a5ca8c2!2sTuckahoe+Plantation!4m7!1m0!1m5!1m1!1s0x89b16bfffe83b50f:0x252ce6150a5ca8c2!2m2!1d-77.653414!2d37.582544?hl=en" target="_blank">Directions</a></p>'
+      '</div>' +
       '</div>';
 
-  var infowindow = new google.maps.InfoWindow({
-      content: contentString
+  var hyattContent = '<div id="markerOverlay">'+
+      '<div class="overlayContent">' +
+      '<h3><a href="http://richmondwest.house.hyatt.com/en/hotel/home.html?src=agn_mls_hh_lclb_gplaces_ricxr" target="_blank">Hyatt House</a></h3>'+
+      '<p>11800 W. Broad Street</p>' +
+      '<p>Richmond, Virginia 23233</p>'+
+      '<p><a href="https://www.google.com/maps/dir//11800+W+Broad+St,+Short+Pump+Town+Center,+Henrico,+VA+23233/@37.6395484,-77.6436502,14z/data=!4m13!1m4!3m3!1s0x89b16a7a1c536b67:0x46b5d16a3aa959fa!2s11800+W+Broad+St!3b1!4m7!1m0!1m5!1m1!1s0x89b16a7a1c536b67:0x46b5d16a3aa959fa!2m2!1d-77.6196127!2d37.6563368" target="_blank">Directions</a></p>'
+      '</div>' +
+      '</div>';
+
+  var hiltonContent = '<div id="markerOverlay">'+
+      '<div class="overlayContent">' +
+      '<h3><a href="http://www3.hilton.com/en/hotels/virginia/hilton-richmond-hotel-and-spa-short-pump-RICWSHF/index.html" target="_blank">Hilton</a></h3>'+
+      '<p>11800 W. Broad Street</p>' +
+      '<p>Richmond, Virginia 23233</p>'+
+      '<p><a href="https://www.google.com/maps/dir//12042+W+Broad+St,+Henrico,+VA+23233/@37.659337,-77.628263,17z/data=!4m13!1m4!3m3!1s0x89b16a748c16ab45:0x14d6110fcd3b498e!2s12042+W+Broad+St!3b1!4m7!1m0!1m5!1m1!1s0x89b16a748c16ab45:0x14d6110fcd3b498e!2m2!1d-77.628263!2d37.659337" target="_blank">Directions</a></p>'
+      '</div>' +
+      '</div>';
+
+  var weddingOverlay = new google.maps.InfoWindow({
+      content: weddingContent
   });
 
-  google.maps.event.addListener(marker, 'click', function() {
-    infowindow.open(map,marker);
+  var hyattOverlay = new google.maps.InfoWindow({
+      content: hyattContent
+  });
+
+  var hiltonOverlay = new google.maps.InfoWindow({
+      content: hiltonContent
+  });
+
+  google.maps.event.addListener(weddingMarker, 'click', function() {
+    weddingOverlay.open(map,weddingMarker);
+  });
+
+  google.maps.event.addListener(hyattMarker, 'click', function() {
+    hyattOverlay.open(map,hyattMarker);
+  });
+
+  google.maps.event.addListener(hiltonMarker, 'click', function() {
+    hiltonOverlay.open(map,hiltonMarker);
   });
 
   var styles = [
@@ -123,7 +179,7 @@ function initialize()
       "visibility":"on"
     },
     {
-      "color":"#57DEC1"
+      "color":"#CFE5E8"
     }]
   },
   {
@@ -167,3 +223,4 @@ map.setOptions({styles: styles});
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
+

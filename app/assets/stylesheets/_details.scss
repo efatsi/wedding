@@ -24,9 +24,22 @@
   }
 }
 
+.coming-soon {
+  font-size: 30px;
+}
+
+#googleMap {
+  border: 2px solid $orange;
+  height: 480px;
+}
+
 #markerOverlay {
   p {
     text-align: left;
     padding: 0 20px;
   }
+}
+
+.overlayContent {
+  padding-bottom: 5px;
 }
