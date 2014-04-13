@@ -6,6 +6,7 @@
   <%= csrf_meta_tags %>
 
   <link rel="shortcut icon" href="<%= asset_path 'favicon.ico' %>">
+
 </head>
 <body>
   <%= content_for :header_image %>
@@ -16,7 +17,7 @@
   </div>
 
   <footer class="footer">
-    K & E
+    K &amp; E
   </footer>
 
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>

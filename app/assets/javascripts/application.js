@@ -65,3 +65,105 @@ $(".alert-close").click(function(e) {
   e.preventDefault();
   $(".alert").slideUp();
 })
+
+// apiKey = "AIzaSyBJWhTJnSJUoplLjz_GBsoudyKOCSbcqvk";
+function initialize()
+{
+  var myLatlng = new google.maps.LatLng(37.582544,-77.653414);
+
+  var mapProp = {
+    center: myLatlng,
+    zoom: 13
+    // mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  var map = new google.maps.Map(document.getElementById("googleMap") ,mapProp);
+
+  var marker = new google.maps.Marker({
+    position: myLatlng,
+    animation: google.maps.Animation.DROP,
+    map: map,
+    title:"Hello World!"
+  });
+
+  var contentString = '<div id="markerOverlay">'+
+      '<h3><a href="http://www.tuckahoeplantation.com/" target="_blank">Tuckahoe Plantation</a></h3>'+
+      '<p>12601 River Road</p>' +
+      '<p>Richmond, Virginia 23238</p>'+
+      '<p><a href="https://www.google.com/maps/dir//Tuckahoe+Plantation,+12601+River+Rd,+Richmond,+VA+23238/@37.582544,-77.653414,17z/data=!4m12!1m3!3m2!1s0x0:0x252ce6150a5ca8c2!2sTuckahoe+Plantation!4m7!1m0!1m5!1m1!1s0x89b16bfffe83b50f:0x252ce6150a5ca8c2!2m2!1d-77.653414!2d37.582544?hl=en" target="_blank">Directions</a></p>'
+      '</div>';
+
+  var infowindow = new google.maps.InfoWindow({
+      content: contentString
+  });
+
+  google.maps.event.addListener(marker, 'click', function() {
+    infowindow.open(map,marker);
+  });
+
+  var styles = [
+  {
+    "featureType": "road",
+    "elementType": "all",
+    "stylers": [
+    {
+      "visibility": "on"
+    },
+    {
+      "saturation": -100
+    },
+    {
+      "lightness": 40
+    }]
+  },
+  {
+    "featureType":"water",
+    "elementType":"geometry",
+    "stylers":[
+    {
+      "visibility":"on"
+    },
+    {
+      "color":"#57DEC1"
+    }]
+  },
+  {
+    "featureType": "landscape.man_made",
+    "elementType": "all",
+    "stylers": [
+    {
+      "visibility": "simplified"
+    },
+    {
+      "saturation": -60
+    },
+    {
+      "lightness": 10
+    }]
+  },
+  {
+    "featureType": "landscape.natural",
+    "elementType": "all",
+    "stylers": [
+    {
+      "visibility": "simplified"
+    },
+    {
+      "saturation": -60
+    },
+    {
+      "lightness": 60
+    }]
+  },
+  {
+    "featureType":"poi",
+    "elementType":"geometry.fill",
+    "stylers":[
+    {
+      "color":"#C5E3BF"
+    }]
+  }]
+
+map.setOptions({styles: styles});
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
