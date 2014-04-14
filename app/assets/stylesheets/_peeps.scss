@@ -9,12 +9,6 @@
     left: -180px;
   }
 
-  h1.guys {
-    position: relative;
-    bottom: -160px;
-    right: -180px;
-  }
-
   .kelsey, .eli {
     padding: 60px 0;
 
@@ -68,7 +62,21 @@
   }
 
   .eli {
-    padding: 210px 0 120px;
+    padding: 290px 0 120px;
+    width: 800px;
+    margin: 0 auto;
+
+    h1.guys {
+      position: relative;
+      float: right;
+      bottom: 120px;
+      left: -90px;
+    }
+
+    img {
+      right: -100px;
+      position: relative;
+    }
   }
 
   .dashes {
