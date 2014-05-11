@@ -29,7 +29,7 @@
 }
 
 #googleMap {
-  border: 2px solid $orange;
+  border: 2px solid $purple;
   height: 480px;
 }
 
@@ -42,4 +42,15 @@
 
 .overlayContent {
   padding-bottom: 5px;
+}
+
+.video {
+  padding: 12px;
+  background: $purple;
+  webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  width: 560px;
+  margin: 20px auto 0;
+  overflow: hidden;
 }

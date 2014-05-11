@@ -67,7 +67,7 @@ $(".alert-close").click(function(e) {
 })
 
 // apiKey = "AIzaSyBJWhTJnSJUoplLjz_GBsoudyKOCSbcqvk";
-function initialize()
+function drawMap()
 {
   var centerLatlng  = new google.maps.LatLng(37.6227063,-77.6331096);
   var weddingLatlng = new google.maps.LatLng(37.582544,-77.653414);
@@ -78,7 +78,7 @@ function initialize()
     center: centerLatlng,
     zoom: 12
   };
-  var map = new google.maps.Map(document.getElementById("googleMap") ,mapProp);
+  var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 
   var weddingImage   = "<%= asset_path('wedding-magenta.png') %>";
   var hotelImage     = "<%= asset_path('hotel-orange.png') %>";
@@ -222,5 +222,6 @@ function initialize()
 map.setOptions({styles: styles});
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
-
+if ($("#googleMap").length > 0) {
+  drawMap();
+}
