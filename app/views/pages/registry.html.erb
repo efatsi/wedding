@@ -2,15 +2,33 @@
   <%= image_tag "bodhi_hero.jpg", :class => "img-hero" %>
 <% end %>
 
-<div class="registry vertical-split">
-  <div class="left">
+<div class="registry">
+  <div>
     <p>
-      We love handmade and other unique gifts. If you&rsquo;re struggling to find something, we&rsquo;ve put together things that we could use on ZOLA - a wonderful registry website. Click the logo to the right, choose a category for the intended gift (kitchen, bathroom, etc.), and scroll through some cool things we&rsquo;ve listed. If you&rsquo;d like to buy it, click the picture and ZOLA will lead you through the rest.
+      We love handmade and unique gifts! We&rsquo;ve also registered at a few different stores. Check out Bed Bath & Beyond, Anthropologie, and Sur la Table for things we could use around the house. ZOLA has an assortment of gifts from other websites that we&rsquo;ve thrown together. Click on the logos below and they&rsquo;ll take you through the rest.
+
+      <p class="hint">
+        *you may need to reload the Anthropologie page if it&rsquo;s not showing up at first
+      </p>
     </p>
   </div>
-  <%= link_to "https://www.zola.com/registry/kelseyandelias", :target => :_blank do %>
-    <%= image_tag "zola-logo-teal.png", :class => "right zola-logo opaque-hover" %>
+
+  <%= link_to "http://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?registryId=541316778&eventType=Wedding&pwsurl=?mcid=EM_triggeredem_emailregistryplural__allpromos", :target => :_blank do %>
+    <%= image_tag "bed-bath.png", :class => "registry-logo opaque-hover" %>
   <% end %>
+
+  <%= link_to "https://www.anthropologie.com/anthro/wishlist/wishlist.jsp?emailOrigin=true&giftlistId=gl154416860", :target => :_blank do %>
+    <%= image_tag "anthropologie-logo.png", :class => "registry-logo opaque-hover" %>
+  <% end %>
+
+  <%= link_to "http://www.surlatable.com/registry/giftRegistryList.jsp?id=200978930065", :target => :_blank do %>
+    <%= image_tag "sur-la-table-logo.png", :class => "registry-logo sur-la-table opaque-hover" %>
+  <% end %>
+
+  <%= link_to "https://www.zola.com/registry/kelseyandelias", :target => :_blank do %>
+    <%= image_tag "zola-logo-teal.png", :class => "registry-logo opaque-hover" %>
+  <% end %>
+
 </div>
 
 <div class="clear"></div>
