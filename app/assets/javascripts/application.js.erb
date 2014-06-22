@@ -69,10 +69,9 @@ $(".alert-close").click(function(e) {
 // apiKey = "AIzaSyBJWhTJnSJUoplLjz_GBsoudyKOCSbcqvk";
 function drawMap()
 {
-  var centerLatlng  = new google.maps.LatLng(37.6227063,-77.6331096);
+  var centerLatlng  = new google.maps.LatLng(37.6227063,-77.6131096);
   var weddingLatlng = new google.maps.LatLng(37.582544,-77.653414);
-  var hyattLatlng   = new google.maps.LatLng(37.6563368,-77.6196127);
-  var hiltonLatlng  = new google.maps.LatLng(37.659337,-77.628263);
+  var marriottLatlng   = new google.maps.LatLng(37.638616,-77.57063);
 
   var mapProp = {
     center: centerLatlng,
@@ -91,15 +90,8 @@ function drawMap()
     icon: weddingImage
   });
 
-  var hyattMarker = new google.maps.Marker({
-    position: hyattLatlng,
-    animation: google.maps.Animation.DROP,
-    map: map,
-    icon: hotelImage
-  });
-
-  var hiltonMarker = new google.maps.Marker({
-    position: hiltonLatlng,
+  var marriottMarker = new google.maps.Marker({
+    position: marriottLatlng,
     animation: google.maps.Animation.DROP,
     map: map,
     icon: hotelImage
@@ -114,21 +106,11 @@ function drawMap()
       '</div>' +
       '</div>';
 
-  var hyattContent = '<div id="markerOverlay">'+
+  var marriottContent = '<div id="markerOverlay">'+
       '<div class="overlayContent">' +
-      '<h3><a href="http://richmondwest.house.hyatt.com/en/hotel/home.html?src=agn_mls_hh_lclb_gplaces_ricxr" target="_blank">Hyatt House</a></h3>'+
-      '<p>11800 W. Broad Street</p>' +
-      '<p>Richmond, Virginia 23233</p>'+
-      '<p><a href="https://www.google.com/maps/dir//11800+W+Broad+St,+Short+Pump+Town+Center,+Henrico,+VA+23233/@37.6395484,-77.6436502,14z/data=!4m13!1m4!3m3!1s0x89b16a7a1c536b67:0x46b5d16a3aa959fa!2s11800+W+Broad+St!3b1!4m7!1m0!1m5!1m1!1s0x89b16a7a1c536b67:0x46b5d16a3aa959fa!2m2!1d-77.6196127!2d37.6563368" target="_blank">Directions</a></p>'
-      '</div>' +
-      '</div>';
-
-  var hiltonContent = '<div id="markerOverlay">'+
-      '<div class="overlayContent">' +
-      '<h3><a href="http://www3.hilton.com/en/hotels/virginia/hilton-richmond-hotel-and-spa-short-pump-RICWSHF/index.html" target="_blank">Hilton</a></h3>'+
-      '<p>11800 W. Broad Street</p>' +
-      '<p>Richmond, Virginia 23233</p>'+
-      '<p><a href="https://www.google.com/maps/dir//12042+W+Broad+St,+Henrico,+VA+23233/@37.659337,-77.628263,17z/data=!4m13!1m4!3m3!1s0x89b16a748c16ab45:0x14d6110fcd3b498e!2s12042+W+Broad+St!3b1!4m7!1m0!1m5!1m1!1s0x89b16a748c16ab45:0x14d6110fcd3b498e!2m2!1d-77.628263!2d37.659337" target="_blank">Directions</a></p>'
+      '<h3><a href="http://www.marriott.com/hotels/hotel-deals/ricnt-springhill-suites-richmond-northwest/" target="_blank">Springhill Suites Marriott</a></h3>'+
+      '<p>9960 Independence Park Dr</p>' +
+      '<p>Henrico, Virginia 23233</p>'+
       '</div>' +
       '</div>';
 
@@ -136,24 +118,16 @@ function drawMap()
       content: weddingContent
   });
 
-  var hyattOverlay = new google.maps.InfoWindow({
-      content: hyattContent
-  });
-
-  var hiltonOverlay = new google.maps.InfoWindow({
-      content: hiltonContent
+  var marriottOverlay = new google.maps.InfoWindow({
+      content: marriottContent
   });
 
   google.maps.event.addListener(weddingMarker, 'click', function() {
     weddingOverlay.open(map,weddingMarker);
   });
 
-  google.maps.event.addListener(hyattMarker, 'click', function() {
-    hyattOverlay.open(map,hyattMarker);
-  });
-
-  google.maps.event.addListener(hiltonMarker, 'click', function() {
-    hiltonOverlay.open(map,hiltonMarker);
+  google.maps.event.addListener(marriottMarker, 'click', function() {
+    marriottOverlay.open(map,marriottMarker);
   });
 
   var styles = [
