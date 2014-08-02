@@ -9,4 +9,8 @@ module ApplicationHelper
     end
   end
 
+  def wedding_day
+    Date.new(2014, 10, 4)
+  end
+
 end

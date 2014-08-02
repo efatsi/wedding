@@ -11,7 +11,13 @@
       WEDDING COUNTDOWN:
     </div>
     <div class="days">
-      <%= (Date.new(2014, 10, 4) - Date.today).to_i %> days!
+      <% if Date.today < wedding_day %>
+        <%= (wedding_day - Date.today).to_i %> days!
+      <% elsif Date.today == wedding_day %>
+        <%= "It's today!!" %>
+      <% else %>
+        <%= "We're married!" %>
+      <% end %>
     </div>
   </div>
 </div>
